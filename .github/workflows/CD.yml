@@ -49,8 +49,8 @@ jobs:
 
       - name: Create SSH key
         run: |
-          echo "${{ secrets.SSH_KEY }}" >> awdEc2.pem
-          chmod 400 awdEc2.pem
+          echo "${{ secrets.SSH_KEY }}" >> awsEc2.pem
+          chmod 400 awsEc2.pem
 
       - name: Deploy to EC2
         uses: appleboy/scp-action@v0.1.7
