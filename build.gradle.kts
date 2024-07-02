@@ -34,6 +34,8 @@ dependencies {
   implementation("io.ktor:ktor-server-resources-jvm")
   implementation("io.ktor:ktor-server-netty-jvm")
   implementation("io.ktor:ktor-server-config-yaml")
+  implementation("io.ktor:ktor-server-cors-jvm")
+  implementation("io.ktor:ktor-server-request-validation")
 
   // Serialization dependencies
   implementation("io.ktor:ktor-serialization-kotlinx-json-jvm")
@@ -55,6 +57,7 @@ dependencies {
   // Swagger UI and jQuery dependencies
   implementation("org.webjars:jquery:3.2.1")
   implementation("io.github.smiley4:ktor-swagger-ui:2.9.0")
+  implementation("io.swagger.core.v3:swagger-annotations:2.2.20")
 
   // Ktor Client
   implementation("io.ktor:ktor-client-core-jvm")

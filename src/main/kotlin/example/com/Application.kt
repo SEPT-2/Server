@@ -15,5 +15,6 @@ fun Application.module() {
   configureMonitoring()
   configureSwaggerUI()
   configureStatusPage()
+  configureRequestValidation()
   configureRouting()
 }
