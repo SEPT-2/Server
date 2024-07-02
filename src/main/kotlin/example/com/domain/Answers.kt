@@ -21,7 +21,7 @@ class Answer(id: EntityID<Long>) : LongEntity(id) {
   var questionId by Answers.questionId
   var type by Answers.type
 
-  @Schema
+  @Schema(name = "Answer")
   data class Response(
     val id: Long,
     val content: String,

@@ -19,5 +19,9 @@ fun Application.configureSwaggerUI() {
       url = "http://localhost:8080"
       description = "Local Server"
     }
+
+    generateTags {
+      listOf("질문")
+    }
   }
 }

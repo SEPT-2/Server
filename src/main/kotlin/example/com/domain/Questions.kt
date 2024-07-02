@@ -23,7 +23,7 @@ class Question(id: EntityID<Long>) : LongEntity(id) {
   val answers by Answer referrersOn Answers.questionId
 
 
-  @Schema
+  @Schema(name = "Question")
   data class Response(
     val id: Long,
     val content: String,
