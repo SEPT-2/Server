@@ -1,5 +1,6 @@
 package example.com.domain
 
+import io.swagger.v3.oas.annotations.media.Schema
 import org.jetbrains.exposed.dao.LongEntity
 import org.jetbrains.exposed.dao.LongEntityClass
 import org.jetbrains.exposed.dao.id.EntityID
@@ -19,18 +20,23 @@ class Question(id: EntityID<Long>) : LongEntity(id) {
   var content by Questions.content
   var field by Questions.field
   var createdAt by Questions.createdAt
+  val answers by Answer referrersOn Answers.questionId
 
+
+  @Schema
   data class Response(
     val id: Long,
     val content: String,
     val field: String,
-    val createdAt: LocalDateTime
+    val createdAt: LocalDateTime,
+    val answers: List<Answer.Response>
   ) {
     constructor(question: Question) : this(
       question.id.value,
       question.content,
       question.field,
-      question.createdAt
+      question.createdAt,
+      question.answers.map { Answer.Response(it) }
     )
   }
 }
