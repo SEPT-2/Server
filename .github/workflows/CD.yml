@@ -57,7 +57,8 @@ jobs:
         with:
           host: ${{ secrets.HOST }}
           username: ubuntu
-          key_path: ./awsEc2.pem
+          # key_path: awsEc2.pem
+          key: ${{ secrets.SSH_KEY }}
           source: ./app/com.sept2.server-all.jar
           target: /home/ubuntu
 
