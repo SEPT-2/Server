@@ -17,6 +17,7 @@ class Answer(id: EntityID<Long>) : LongEntity(id) {
   companion object : LongEntityClass<Answer>(Answers)
 
   var content by Answers.content
+  var question by Question referencedOn Answers.questionId
   var questionId by Answers.questionId
   var type by Answers.type
 
