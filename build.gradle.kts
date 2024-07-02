@@ -40,6 +40,8 @@ dependencies {
   // Serialization dependencies
   implementation("io.ktor:ktor-serialization-kotlinx-json-jvm")
   implementation("io.ktor:ktor-serialization-jackson-jvm")
+  implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")
+
 
   // Database and ORM dependencies
   implementation("org.jetbrains.exposed:exposed-core:$exposed_version")
