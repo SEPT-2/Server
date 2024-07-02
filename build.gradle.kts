@@ -9,8 +9,12 @@ plugins {
   id("org.jetbrains.kotlin.plugin.serialization") version "2.0.0"
 }
 
-group = "example.com"
+group = "sept2"
 version = "0.0.1"
+
+tasks.jar {
+  archiveFileName.set("setp2-server.jar")
+}
 
 application {
   mainClass.set("io.ktor.server.netty.EngineMain")
