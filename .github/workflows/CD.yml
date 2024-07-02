@@ -60,7 +60,7 @@ jobs:
           # key_path: awsEc2.pem
           key: ${{ secrets.SSH_KEY }}
           source: ./app/com.sept2.server-all.jar
-          target: /home/ubuntu/app
+          target: /home/ubuntu
 
       - name: Run the jar
         run: |
