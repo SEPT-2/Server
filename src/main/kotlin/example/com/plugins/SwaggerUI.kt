@@ -15,9 +15,14 @@ fun Application.configureSwaggerUI() {
       version = "1.0.0"
       description = "초간단 정치 성향 테스트 API"
     }
+    //server {
+    //  url = "http://localhost:8080"
+    //  description = "Local Server"
+    //}
+
     server {
-      url = "http://localhost:8080"
-      description = "Local Server"
+      url = "http://ec2-13-124-33-101.ap-northeast-2.compute.amazonaws.com:8080"
+      description = "Dev Server"
     }
 
     generateTags {
