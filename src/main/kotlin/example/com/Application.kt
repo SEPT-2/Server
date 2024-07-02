@@ -1,6 +1,5 @@
 package example.com
 
-import configureApiKeyHeader
 import example.com.plugins.*
 import io.ktor.server.application.*
 import io.ktor.server.netty.*
@@ -11,12 +10,12 @@ fun main(args: Array<String>) {
 
 fun Application.module() {
   DatabaseFactory.init()
+
   configureKoin()
   configureSerialization()
   configureMonitoring()
   configureSwaggerUI()
   configureStatusPage()
   configureRequestValidation()
-  configureApiKeyHeader()
   configureRouting()
 }

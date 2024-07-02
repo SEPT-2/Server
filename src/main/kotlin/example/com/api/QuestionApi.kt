@@ -35,7 +35,6 @@ class QuestionApi {
         summary = "질문 생성하기"
         description = "질문을 생성하도록 요청합니다."
         tags = listOf("질문")
-
       }
     }
   }
