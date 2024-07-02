@@ -8,3 +8,5 @@ ktor:
     watch: [ Server ]
 
 
+mode: "$MODE:local"
+

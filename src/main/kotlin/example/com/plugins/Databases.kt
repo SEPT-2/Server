@@ -12,9 +12,12 @@ import org.sqlite.JDBC
 object DatabaseFactory {
   private lateinit var database: Database
 
-  fun init() {
+  fun init(mode: String) {
     database = Database.connect(
-      "jdbc:sqlite:/Users/daehyeon/Documents/Code/SEPT2/Server/database.sqlite",
+      when (mode) {
+        "local" -> "jdbc:sqlite:/Users/daehyeon/Documents/Code/SEPT2/Server/database.sqlite"
+        else -> System.getenv("DB_URL")
+      },
       driver = JDBC::class.java.name
     )
     transaction {
