@@ -39,3 +39,6 @@ out/
 *.db
 *.sql
 *.sqlite
+
+### environment ###
+.env
