@@ -9,7 +9,7 @@ plugins {
   id("org.jetbrains.kotlin.plugin.serialization") version "2.0.0"
 }
 
-group = "sept2.com"
+group = "sept2"
 version = "0.0.1"
 
 tasks.jar {
