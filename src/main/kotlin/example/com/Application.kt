@@ -1,5 +1,6 @@
 package example.com
 
+import configureApiKeyHeader
 import example.com.plugins.*
 import io.ktor.server.application.*
 import io.ktor.server.netty.*
@@ -16,5 +17,6 @@ fun Application.module() {
   configureSwaggerUI()
   configureStatusPage()
   configureRequestValidation()
+  configureApiKeyHeader()
   configureRouting()
 }
