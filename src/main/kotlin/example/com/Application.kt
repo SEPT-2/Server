@@ -9,7 +9,7 @@ fun main(args: Array<String>) {
 }
 
 fun Application.module() {
-  DatabaseFactory.init(environment.config.property("mode").getString())
+  DatabaseFactory.init()
 
   configureKoin()
   configureSerialization()
