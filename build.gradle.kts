@@ -55,6 +55,11 @@ dependencies {
 
   // SQLite driver
   implementation("org.xerial:sqlite-jdbc:3.46.0.0")
+  // PostgreSQL driver
+  implementation("org.postgresql:postgresql:42.7.3")
+
+  //HikariCP
+  implementation("com.zaxxer:HikariCP:5.1.0")
 
 
   // Logging dependencies
